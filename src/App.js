@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+// Import Simple React Lightbox
+import SimpleReactLightbox from "simple-react-lightbox";
+
+//Components
+import Header from "./components/Header/Header";
+import About from "./components/About/About";
+import Testimonials from "./components/Testimonials/Testimonials";
+import Customers from "./components/Customers/Customers";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <About/>
+      <Testimonials/>
+      <SimpleReactLightbox>
+        <Customers/>
+      </SimpleReactLightbox>
+      <Footer/>
     </div>
   );
 }
